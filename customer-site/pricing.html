@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Acme Co — Pricing</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 640px; margin: 4rem auto; padding: 0 1rem; }
+    .flyrank-widget { border: 1px solid #ddd; border-radius: 8px; padding: 1.5rem; margin-top: 2rem; }
+    .flyrank-widget input { display: block; width: 100%; padding: 0.5rem; margin: 0.5rem 0; box-sizing: border-box; }
+    .flyrank-widget button { padding: 0.5rem 1rem; cursor: pointer; }
+    p.note { color: #666; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <h1>Acme Co — Pricing</h1>
+  <p class="note">
+    This page demonstrates the targeting-rules stretch goal. The embedded
+    widget below is configured with <code>delay_seconds: 3</code>,
+    <code>target_paths: ["/pricing", "/blog/*"]</code>, and
+    <code>show_once_per_visitor: true</code>.
+  </p>
+  <ul class="note">
+    <li>Reload this page — the widget should NOT appear for ~3 seconds.</li>
+    <li>Open <code>index.html</code> instead (a page not in <code>target_paths</code>) —
+        the widget should never appear there.</li>
+    <li>After it appears once here, reload — it should NOT appear again
+        (check DevTools → Application → Local Storage to see the
+        <code>flyrank_widget_seen_&lt;id&gt;</code> key set).</li>
+  </ul>
+
+  <p>Standard pricing content would go here. The widget is embedded below:</p>
+
+  <!-- Replace ?id=... with the "targeted" widget ID from your seed output -->
+  <script src="http://localhost:8000/widget.js?id=c1242368-a214-46fc-a03e-324477b1df75"></script>
+
+</body>
+</html>
