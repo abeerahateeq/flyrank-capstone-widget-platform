@@ -1,1 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Acme Co — a website we don't control</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 640px; margin: 4rem auto; padding: 0 1rem; }
+    .flyrank-widget { border: 1px solid #ddd; border-radius: 8px; padding: 1.5rem; margin-top: 2rem; }
+    .flyrank-widget input { display: block; width: 100%; padding: 0.5rem; margin: 0.5rem 0; box-sizing: border-box; }
+    .flyrank-widget button { padding: 0.5rem 1rem; cursor: pointer; }
+    p.note { color: #666; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <h1>Acme Co</h1>
+  <p class="note">
+    This page is served from a different origin than the widget API
+    (e.g. <code>http://localhost:5500</code> vs <code>http://localhost:8000</code>),
+    which is exactly what makes the embed below a real cross-origin test.
+  </p>
 
+  <p>This is a normal marketing page. Below is the embedded widget — one line, pasted from the dashboard:</p>
+
+  <!--
+    Replace ?id=... with the widget_id printed by `python scripts/seed.py`.
+    If your API isn't on localhost:8000, update the src origin too.
+  -->
+  <script src="http://localhost:8000/widget.js?id=15bca617-31f6-434f-bd15-e7aa3f6e0340"></script>
+
+</body>
+</html>
